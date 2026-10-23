@@ -6,15 +6,15 @@ interface HeroSectionProps {
 
 export const LandingPageContainer = styled.main`
   min-height: 100vh;
-  background-color: var(--color-white);
+  background-color: ${({ theme }) => theme.colors.white};
 `
 
 export const AnnouncementBar = styled.div`
   width: 100%;
   padding: 8px 16px;
 
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.white};
 
   font-size: 12px;
   font-weight: 500;
@@ -29,10 +29,9 @@ export const HeroSection = styled.section<HeroSectionProps>`
 
   display: flex;
   align-items: center;
-
   overflow: hidden;
 
-  background-color: var(--color-soft-pink);
+  background-color: ${({ theme }) => theme.colors.softPink};
   background-image: ${({ $backgroundImage }) =>
     `url(${$backgroundImage})`};
   background-position: center;
@@ -58,15 +57,6 @@ export const HeroOverlay = styled.div`
   );
 
   pointer-events: none;
-
-  @media (max-width: 768px) {
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.94) 0%,
-      rgba(255, 255, 255, 0.76) 65%,
-      rgba(255, 255, 255, 0.2) 100%
-    );
-  }
 `
 
 export const HeroContent = styled.div`
@@ -86,7 +76,7 @@ export const HeroContent = styled.div`
 export const HeroEyebrow = styled.p`
   margin-bottom: 22px;
 
-  color: var(--color-primary);
+  color: ${({ theme }) => theme.colors.primary};
 
   font-size: 12px;
   font-weight: 600;
@@ -98,9 +88,9 @@ export const HeroTitle = styled.h1`
   max-width: 540px;
   margin: 0;
 
-  color: var(--color-primary-darker);
+  color: ${({ theme }) => theme.colors.primaryDarker};
 
-  font-size: clamp(48px, 7vw, 82px);
+  font-size: ${({ theme }) => theme.fontSizes.title};
   font-weight: 700;
   letter-spacing: -2.5px;
   line-height: 0.98;
@@ -110,27 +100,20 @@ export const HeroSubtitle = styled.span`
   display: block;
   margin-top: 12px;
 
-  color: var(--color-primary);
+  color: ${({ theme }) => theme.colors.primary};
 
-  font-family: 'Andrea Bellarosa', cursive;
+  font-family: ${({ theme }) => theme.fonts.script};
   font-size: clamp(48px, 6vw, 76px);
   font-weight: 400;
-  letter-spacing: 10;
   line-height: 1;
 `
-
 
 export const HeroDescription = styled.p`
   max-width: 430px;
   margin: 28px 0 32px;
 
-  color: var(--color-text-secondary);
+  color: ${({ theme }) => theme.colors.textSecondary};
 
   font-size: 15px;
-  font-weight: 400;
   line-height: 1.8;
-`
-
-export const EmptyContent = styled.section`
-  min-height: 0;
 `

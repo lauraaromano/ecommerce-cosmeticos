@@ -6,10 +6,10 @@ export const Button = styled.a`
   justify-content: center;
 
   padding: 11px 22px;
-  border-radius: 8px;
+  border-radius: ${({ theme }) => theme.borderRadius.small};
 
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.white};
 
   font-size: 14px;
   font-weight: 500;
@@ -20,7 +20,7 @@ export const Button = styled.a`
     transform 0.2s ease;
 
   &:hover {
-    background-color: #a95769;
+    background-color: ${({ theme }) => theme.colors.primaryHover};
     transform: translateY(-1px);
   }
 

@@ -8,17 +8,6 @@
   font-display: swap;
 }
 
-:root {
-  --color-primary: #c16a7b;
-  --color-primary-darker:rgb(116, 65, 76);
-  --color-background: #f7ede8;
-  --color-soft-pink: #f8e8e8;
-  --color-white: #ffffff;
-  --color-text: #292323;
-  --color-text-secondary: #777777;
-  --color-border: #e8e1df;
-}
-
 * {
   margin: 0;
   padding: 0;
