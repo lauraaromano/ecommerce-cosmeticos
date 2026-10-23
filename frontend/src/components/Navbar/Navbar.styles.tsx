@@ -5,8 +5,9 @@ interface NavigationProps {
 }
 
 export const NavbarContainer = styled.header`
-  position: relative;
-  z-index: 10;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 
   width: 100%;
   background-color: ${({ theme }) => theme.colors.white};

@@ -1,6 +1,7 @@
 import productsImage from '../../assets/images/products.png'
 import Button from '../../components/Button/Button'
 import Navbar from '../../components/Navbar/Navbar'
+import ProductCarousel from '../../components/ProductCarousel/ProductCarousel'
 
 import * as S from './LandingPage.styles'
 
@@ -32,15 +33,14 @@ function LandingPage() {
 
           <Button href="#produtos">
             Explorar produtos
-            <span
-              aria-hidden="true"
-              style={{ marginLeft: '8px' }}>
+            <span aria-hidden="true" style={{ marginLeft: '8px' }}>
               →
             </span>
           </Button>
-
         </S.HeroContent>
       </S.HeroSection>
+
+      <ProductCarousel />
     </S.LandingPageContainer>
   )
 }
